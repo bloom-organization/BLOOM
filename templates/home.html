@@ -1,0 +1,8 @@
+홈
+{% if user.is_authenticated %}
+<form action="{% url 'accounts:logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">로그아웃</button>
+</form>
+{% endif %}
+
